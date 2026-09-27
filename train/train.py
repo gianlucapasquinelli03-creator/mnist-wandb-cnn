@@ -21,7 +21,7 @@ from tqdm import tqdm
 import wandb
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
-from datasets.mnist import get_dataloaders
+from mnist_data.mnist import get_dataloaders
 from models.cnn import SimpleCNN
 
 
