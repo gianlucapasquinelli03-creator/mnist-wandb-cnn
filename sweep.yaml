@@ -1,0 +1,17 @@
+program: train/train.py
+project: mnist-cnn          # deve coincidere con il default --project di train.py
+method: bayes               # alternative: random, grid
+
+metric:
+  name: val/accuracy        # la metrica che loggiamo in train.py
+  goal: maximize
+
+parameters:
+  lr:
+    distribution: log_uniform_values
+    min: 0.0001
+    max: 0.01
+  batch_size:
+    values: [32, 64, 128]
+  epochs:
+    value: 3                # fisso e basso: ogni run dura pochi minuti
